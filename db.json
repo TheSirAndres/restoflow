@@ -1,0 +1,263 @@
+{
+  "food": [
+    {
+      "id": 1,
+      "name": "Garlic Bread",
+      "category": "appetizers",
+      "price": 6.5,
+      "icon": "fa-bread-slice"
+    },
+    {
+      "id": 2,
+      "name": "Mozzarella Sticks",
+      "category": "appetizers",
+      "price": 8,
+      "icon": "fa-cheese"
+    },
+    {
+      "id": 3,
+      "name": "Grilled Salmon",
+      "category": "mains",
+      "price": 18,
+      "icon": "fa-fish"
+    },
+    {
+      "id": 4,
+      "name": "Chicken Parmesan",
+      "category": "mains",
+      "price": 16.5,
+      "icon": "fa-drumstick-bite"
+    },
+    {
+      "id": 5,
+      "name": "Classic Burger",
+      "category": "fastfood",
+      "price": 12,
+      "icon": "fa-hamburger"
+    },
+    {
+      "id": 6,
+      "name": "Margherita Pizza",
+      "category": "fastfood",
+      "price": 14,
+      "icon": "fa-pizza-slice"
+    },
+    {
+      "id": 7,
+      "name": "Chocolate Cake",
+      "category": "desserts",
+      "price": 7.5,
+      "icon": "fa-ice-cream"
+    },
+    {
+      "id": 8,
+      "name": "Tiramisu",
+      "category": "desserts",
+      "price": 8.5,
+      "icon": "fa-cookie"
+    },
+    {
+      "id": 9,
+      "name": "Cappuccino",
+      "category": "drinks",
+      "price": 4.5,
+      "icon": "fa-coffee"
+    },
+    {
+      "id": 10,
+      "name": "House Wine",
+      "category": "drinks",
+      "price": 9,
+      "icon": "fa-wine-glass-alt"
+    },
+    {
+      "id": 11,
+      "name": "Caesar Salad",
+      "category": "appetizers",
+      "price": 9.5,
+      "icon": "fa-leaf"
+    },
+    {
+      "id": 12,
+      "name": "Tomato Soup",
+      "category": "appetizers",
+      "price": 7,
+      "icon": "fa-utensil-spoon"
+    },
+    {
+      "id": 13,
+      "name": "Beef Steak",
+      "category": "mains",
+      "price": 22,
+      "icon": "fa-cow"
+    },
+    {
+      "id": 14,
+      "name": "Vegetarian Lasagna",
+      "category": "mains",
+      "price": 15,
+      "icon": "fa-leaf"
+    },
+    {
+      "id": 15,
+      "name": "Shrimp Tacos",
+      "category": "fastfood",
+      "price": 13,
+      "icon": "fa-shrimp"
+    },
+    {
+      "id": 16,
+      "name": "Hot Dog",
+      "category": "fastfood",
+      "price": 9,
+      "icon": "fa-hotdog"
+    },
+    {
+      "id": 17,
+      "name": "Cheesecake",
+      "category": "desserts",
+      "price": 8,
+      "icon": "fa-birthday-cake"
+    },
+    {
+      "id": 18,
+      "name": "Fruit Salad",
+      "category": "desserts",
+      "price": 6,
+      "icon": "fa-apple-alt"
+    },
+    {
+      "id": 19,
+      "name": "Iced Tea",
+      "category": "drinks",
+      "price": 3.5,
+      "icon": "fa-glass-whiskey"
+    },
+    {
+      "id": 20,
+      "name": "Mojito",
+      "category": "drinks",
+      "price": 10,
+      "icon": "fa-cocktail"
+    }
+  ],
+  "submit": [
+    {
+      "items": [
+        {
+          "name": "Mozzarella Sticks",
+          "price": 8,
+          "quantity": 1,
+          "id": 2
+        },
+        {
+          "name": "Margherita Pizza",
+          "price": 14,
+          "quantity": 1,
+          "id": 6
+        },
+        {
+          "name": "House Wine",
+          "price": 9,
+          "quantity": 1,
+          "id": 10
+        },
+        {
+          "name": "Iced Tea",
+          "price": 3.5,
+          "quantity": 1,
+          "id": 19
+        },
+        {
+          "id": 1,
+          "name": "Garlic Bread",
+          "price": 6.5,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 41,
+      "tax": 4.1000000000000005,
+      "tip": 20,
+      "tipAmount": 8.200000000000001,
+      "total": 53.300000000000004,
+      "id": "undp",
+      "status": "Preparing"
+    },
+    {
+      "items": [
+        {
+          "name": "Grilled Salmon",
+          "price": 18,
+          "quantity": 2,
+          "id": 3
+        },
+        {
+          "name": "Caesar Salad",
+          "price": 9.5,
+          "quantity": 2,
+          "id": 11
+        },
+        {
+          "name": "Iced Tea",
+          "price": 3.5,
+          "quantity": 2,
+          "id": 19
+        },
+        {
+          "name": "Mojito",
+          "price": 10,
+          "quantity": 1,
+          "id": 20
+        },
+        {
+          "name": "Cheesecake",
+          "price": 8,
+          "quantity": 1,
+          "id": 17
+        },
+        {
+          "name": "Tiramisu",
+          "price": 8.5,
+          "quantity": 1,
+          "id": 8
+        },
+        {
+          "id": 5,
+          "name": "Classic Burger",
+          "price": 12,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 100.5,
+      "tax": 10.05,
+      "tip": 10,
+      "tipAmount": 10.05,
+      "total": 120.6,
+      "id": "znje",
+      "status": "Pending"
+    },
+    {
+      "items": [
+        {
+          "name": "Mozzarella Sticks",
+          "price": 8,
+          "quantity": 2,
+          "id": 2
+        },
+        {
+          "name": "Grilled Salmon",
+          "price": 18,
+          "quantity": 1,
+          "id": 3
+        }
+      ],
+      "subtotal": 34,
+      "tax": 3.4000000000000004,
+      "tip": 20,
+      "tipAmount": 6.800000000000001,
+      "total": 44.2,
+      "id": "b3gx",
+      "status": "Preparing"
+    }
+  ]
+}

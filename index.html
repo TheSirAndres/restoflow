@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Gestión de Pedidos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="background-animation">
+      <div class="floating-element"></div>
+      <div class="floating-element"></div>
+      <div class="floating-element"></div>
+    </div>
+
+    <div class="container">
+      <header>
+        <div class="logo">
+          <i class="fas fa-utensils"></i>
+          <h1>FoodFlow</h1>
+        </div>
+        <button class="theme-toggle" id="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </button>
+        <nav>
+          <a href="#" id="orders-link" class="active"
+            ><i class="fas fa-list"></i> Active Orders</a
+          >
+          <a href="#" id="new-order-link"
+            ><i class="fas fa-plus-circle"></i> New Order</a
+          >
+          <a href="#" id="analytics-link"
+            ><i class="fas fa-chart-line"></i> Analytics</a
+          >
+          <a href="#" id="history-link"
+            ><i class="fas fa-history"></i> History</a
+          >
+        </nav>
+      </header>
+
+      <div class="mobile-nav">
+        <a href="#" id="mobile-orders-link" class="active">
+          <i class="fas fa-list"></i>
+          <span>Orders</span>
+        </a>
+        <a href="#" id="mobile-new-order-link">
+          <i class="fas fa-plus-circle"></i>
+          <span>New Order</span>
+        </a>
+        <a href="#" id="mobile-analytics-link">
+          <i class="fas fa-chart-line"></i>
+          <span>Analytics</span>
+        </a>
+        <a href="#" id="mobile-history-link">
+          <i class="fas fa-history"></i>
+          <span>History</span>
+        </a>
+      </div>
+
+      <!-- Orders Section -->
+      <section id="orders-section" class="section">
+        <div class="section-header">
+          <h2><i class="fas fa-list"></i> Active Orders</h2>
+          <button class="btn btn-primary" id="create-order-btn">
+            <i class="fas fa-plus"></i> Create New Order
+          </button>
+        </div>
+        <div class="orders-grid">
+          <!-- Orders will be dynamically populated here -->
+        </div>
+      </section>
+
+      <!-- New Order Section -->
+      <section id="new-order-section" class="section">
+        <div class="section-header">
+          <h2><i class="fas fa-plus-circle"></i> Create New Order</h2>
+          <button class="btn btn-outline" id="back-to-orders">
+            <i class="fas fa-arrow-left"></i> Back to Orders
+          </button>
+        </div>
+
+        <div class="categories">
+          <button class="category-btn active" data-category="all">All</button>
+          <button class="category-btn" data-category="mains">
+            Main Courses
+          </button>
+          <button class="category-btn" data-category="appetizers">
+            Appetizers
+          </button>
+          <button class="category-btn" data-category="drinks">Drinks</button>
+          <button class="category-btn" data-category="desserts">
+            Desserts
+          </button>
+          <button class="category-btn" data-category="fastfood">
+            Fast Food
+          </button>
+        </div>
+
+        <div class="products-grid">
+          <!-- Products will be dynamically populated here -->
+        </div>
+
+        <div class="order-summary">
+          <h3><i class="fas fa-receipt"></i> Order Summary</h3>
+          <ul class="summary-items" id="order-items">
+            <!-- Order items will be dynamically populated here -->
+          </ul>
+
+          <div class="summary-totals">
+            <div class="total-row">
+              <span>Subtotal:</span>
+              <span id="subtotal">$0.00</span>
+            </div>
+            <div class="total-row">
+              <span>Tax (10%):</span>
+              <span id="tax">$0.00</span>
+            </div>
+
+            <div class="tip-section">
+              <p><strong>Tip:</strong></p>
+              <div class="tip-buttons">
+                <button class="tip-btn active" data-tip="0">No Tip</button>
+                <button class="tip-btn" data-tip="10">10%</button>
+                <button class="tip-btn" data-tip="15">15%</button>
+                <button class="tip-btn" data-tip="20">20%</button>
+              </div>
+              <div class="custom-tip">
+                <input
+                  type="number"
+                  id="custom-tip-input"
+                  placeholder="Custom amount"
+                />
+                <button class="btn btn-outline" id="apply-custom-tip">
+                  Apply
+                </button>
+              </div>
+            </div>
+
+            <div class="total-row">
+              <span>Tip Amount:</span>
+              <span id="tip-amount">$0.00</span>
+            </div>
+            <div class="total-row final">
+              <span>Total:</span>
+              <span id="order-total">$0.00</span>
+            </div>
+          </div>
+
+          <div class="summary-actions">
+            <button class="btn btn-danger" id="clear-order">
+              <i class="fas fa-trash"></i> Clear Order
+            </button>
+            <button class="btn btn-primary" id="submit-order">
+              <i class="fas fa-check"></i> Submit Order
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Analytics Section -->
+      <section id="analytics-section" class="section">
+        <div class="section-header">
+          <h2><i class="fas fa-chart-line"></i> Analytics Dashboard</h2>
+        </div>
+        <div class="analytics-grid">
+          <div class="chart-container">
+            <h3><i class="fas fa-chart-bar"></i> Sales This Week</h3>
+            <div class="sales-chart" id="sales-chart">
+              <!-- Chart will be dynamically populated here -->
+            </div>
+          </div>
+          <div class="chart-container">
+            <h3><i class="fas fa-info-circle"></i> Statistics</h3>
+            <div class="stats">
+              <div class="stat-card">
+                <i class="fas fa-receipt"></i>
+                <h4>42</h4>
+                <p>Orders Today</p>
+              </div>
+              <div class="stat-card">
+                <i class="fas fa-dollar-sign"></i>
+                <h4>$1,245</h4>
+                <p>Revenue Today</p>
+              </div>
+              <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <h4>28</h4>
+                <p>Active Customers</p>
+              </div>
+              <div class="stat-card">
+                <i class="fas fa-star"></i>
+                <h4>4.8</h4>
+                <p>Average Rating</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- History Section -->
+      <section id="history-section" class="section">
+        <div class="section-header">
+          <h2><i class="fas fa-history"></i> Order History</h2>
+        </div>
+        <div class="orders-grid">
+          <!-- Completed orders will be dynamically populated here -->
+        </div>
+      </section>
+
+      <div class="floating-action" id="floating-action">
+        <i class="fas fa-plus"></i>
+      </div>
+    </div>
+
+    <!-- Edit Order Modal -->
+    <div class="modal" id="edit-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>
+            <i class="fas fa-edit"></i> Edit Order #<span
+              id="edit-order-id"
+            ></span>
+          </h3>
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <ul class="modal-items-list">
+            <!-- Order items will be dynamically populated here -->
+          </ul>
+
+          <div class="modal-summary">
+            <div class="total-row">
+              <span>Subtotal:</span>
+              <span id="modal-subtotal">$0.00</span>
+            </div>
+            <div class="total-row">
+              <span>Tax (10%):</span>
+              <span id="modal-tax">$0.00</span>
+            </div>
+            <div class="total-row">
+              <span>Tip Amount:</span>
+              <span id="modal-tip-amount">$0.00</span>
+            </div>
+            <div class="total-row final">
+              <span>Total:</span>
+              <span id="modal-total">$0.00</span>
+            </div>
+          </div>
+
+          <div class="status-options">
+            <button class="status-option pending active">Pending</button>
+            <button class="status-option preparing">Preparing</button>
+            <button class="status-option ready">Ready</button>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-danger" id="cancel-order-btn">
+            <i class="fas fa-times"></i> Cancel Order
+          </button>
+          <button class="btn btn-primary" id="save-changes-btn">
+            <i class="fas fa-check"></i> Save Changes
+          </button>
+        </div>
+        <div class="add-products-section">
+          <h4><i class="fas fa-plus-circle"></i> Add Products to Order</h4>
+          <div class="search-products">
+            <input
+              type="text"
+              id="modal-product-search"
+              placeholder="Search products..."
+            />
+            <button class="btn btn-outline" id="modal-search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <div class="modal-products-grid"></div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="js/animation.js"></script>
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>
